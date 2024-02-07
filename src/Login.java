@@ -14,6 +14,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -38,6 +39,8 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("PIc");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1440, 900));
+        setMinimumSize(new java.awt.Dimension(856, 460));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 0));
 
@@ -55,6 +58,11 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Password :");
 
         reg.setText("Sign up");
+        reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,6 +125,10 @@ public class Login extends javax.swing.JFrame {
     private void logActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logActionPerformed
        
     }//GEN-LAST:event_logActionPerformed
+
+    private void regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regActionPerformed
 
     /**
      * @param args the command line arguments
