@@ -1,8 +1,13 @@
+package newpackage;
+
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package signUpInterface;
+
 
 /**
  *
@@ -16,7 +21,10 @@ public class signUp extends javax.swing.JFrame {
     public signUp() {
         initComponents();
     }
-
+public void close(){
+    WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+    Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,11 +43,16 @@ public class signUp extends javax.swing.JFrame {
         newPass1 = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 102, 0));
 
         reg1.setText("Register");
+        reg1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reg1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("User :");
 
@@ -111,6 +124,12 @@ public class signUp extends javax.swing.JFrame {
     private void conPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conPassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_conPassActionPerformed
+
+    private void reg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg1ActionPerformed
+       close();
+        login lg = new login();
+       lg.setVisible(true);
+    }//GEN-LAST:event_reg1ActionPerformed
 
     /**
      * @param args the command line arguments
