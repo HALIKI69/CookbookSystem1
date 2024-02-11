@@ -7,6 +7,7 @@ import newpackage.signUp;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -26,10 +27,23 @@ public class login extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+    
+//    Connection con;
+//    PreparedStatement ps;
+//    ResultSet rs;
+//    
+//    public void Connect(){
+//        try {
+//            Class.forName("com.mysql.jdc.Driver");
+//        } catch (Exception e) {
+//        }
+//    }
+            
 public void close(){
     WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
     Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
 }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
